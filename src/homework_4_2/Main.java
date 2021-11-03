@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println();
 
-        p.set_id(2);
+        p.set_id(3);
         p.set_firstName("Roman");
         p.set_lastName("Sopotnytskyi");
         p.set_age(29);
