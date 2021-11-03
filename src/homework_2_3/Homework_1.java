@@ -1,6 +1,6 @@
-package com.company;
+package homework_2_3;
 
-public class Main {
+public class Homework_1 {
 
     public static void main(String[] args) {
         //1
