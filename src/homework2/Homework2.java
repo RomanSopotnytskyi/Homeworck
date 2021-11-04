@@ -1,8 +1,8 @@
-package homework_2_3;
+package homework2;
 
 import java.util.Random;
 
-public class Homework_2 {
+public class Homework2 {
     public static void main(String[] args) {
 
         // Заповнити масив тільки парними числами
