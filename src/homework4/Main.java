@@ -37,7 +37,6 @@ public class Main {
 
         //Виведення символів з таблиці ASCI
         x.initArrayASCI();
-
         x.printArreyASCI();
     }
 }
