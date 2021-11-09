@@ -11,11 +11,13 @@ public class Сircle extends GeometricFigure{
         radius = r;
     }
 
+    @Override
     public double Area (){
         return Math.PI*radius*radius;
     }
 
-    public void PrintArea(String name){
-        System.out.println(name + " його фігура коло з площею - "+ Area());
+    @Override
+    public void PrintArea(){
+        System.out.println(" коло з площею - "+ Area());
     }
 }

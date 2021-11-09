@@ -13,11 +13,13 @@ public class Rectangle extends GeometricFigure{
         sideB = b;
     }
 
+    @Override
     public double Area (){
         return sideA*sideB;
     }
 
-    public void PrintArea(String name){
-        System.out.println(name + " його фігура прямокутник з площею - "+ Area());
+    @Override
+    public void PrintArea(){
+        System.out.println(" прямокутник з площею - "+ Area());
     }
 }

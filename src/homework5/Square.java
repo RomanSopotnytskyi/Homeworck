@@ -11,11 +11,13 @@ public class Square extends GeometricFigure{
         sideA = a;
     }
 
+    @Override
     public double Area (){
         return Math.pow(sideA, 2);
     }
 
-    public void PrintArea(String name){
-        System.out.println(name + " його фігура квадрат з площею - "+ Area());
+    @Override
+    public void PrintArea(){
+        System.out.println(" квадрат з площею - "+ Area());
     }
 }
