@@ -16,13 +16,13 @@ public class Triangle extends GeometricFigure {
     }
 
     @Override
-    public double Area (){
+    public double area (){
         double p = (sideA+sideB+sideC)/2;
         return Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
     }
 
     @Override
-    public void PrintArea(){
-        System.out.println(" трикутник з площею - "+ Area());
+    public void printArea(){
+        System.out.println(" трикутник з площею - "+ area());
     }
 }

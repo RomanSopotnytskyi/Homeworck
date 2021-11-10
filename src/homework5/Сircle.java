@@ -12,12 +12,12 @@ public class Сircle extends GeometricFigure{
     }
 
     @Override
-    public double Area (){
+    public double area (){
         return Math.PI*radius*radius;
     }
 
     @Override
-    public void PrintArea(){
-        System.out.println(" коло з площею - "+ Area());
+    public void printArea(){
+        System.out.println(" коло з площею - "+ area());
     }
 }

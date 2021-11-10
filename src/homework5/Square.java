@@ -12,12 +12,12 @@ public class Square extends GeometricFigure{
     }
 
     @Override
-    public double Area (){
+    public double area (){
         return Math.pow(sideA, 2);
     }
 
     @Override
-    public void PrintArea(){
-        System.out.println(" квадрат з площею - "+ Area());
+    public void printArea(){
+        System.out.println(" квадрат з площею - "+ area());
     }
 }

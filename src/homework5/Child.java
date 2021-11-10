@@ -10,5 +10,9 @@ public class Child {
         this.figure = f;
     }
 
+    public void printInfoAboutChild() {
+        System.out.print(this.name + " має" );
+        figure.printArea();
+    }
 
 }

@@ -5,11 +5,11 @@ public class GeometricFigure {
     public void GeometricFigure(){
     }
 
-    public double Area (){
+    public double area (){
         return 0;
     }
 
-    public void PrintArea(){
+    public void printArea(){
 
     }
 
