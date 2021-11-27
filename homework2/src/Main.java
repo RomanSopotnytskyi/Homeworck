@@ -1,8 +1,7 @@
-package homework2;
-
 import java.util.Random;
 
-public class Homework2 {
+public class Main {
+
     public static void main(String[] args) {
 
         // Заповнити масив тільки парними числами
@@ -72,4 +71,5 @@ public class Homework2 {
             System.out.print(' ');
         }
     }
+
 }

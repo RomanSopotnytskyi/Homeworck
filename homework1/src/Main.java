@@ -1,6 +1,4 @@
-package homework2;
-
-public class Homework1 {
+public class Main {
 
     public static void main(String[] args) {
         //1
@@ -61,4 +59,5 @@ public class Homework1 {
         result = 9 >= 8;
         System.out.println("9 >= 8 - " + result );
     }
+
 }

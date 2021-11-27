@@ -1,4 +1,4 @@
-package homework4.part2;
+package part2;
 
 public class Person {
 
