@@ -27,7 +27,7 @@ public class Main {
         personList.add(new Person("Borys","Paton",101,"Kiiv"));
         personList.add(new Person("Igor","Sikorsky",83,"Kiiv"));
         personList.add(new Person("Ruslan","Rotan",40,"Poltava"));
-/*
+
         //За допомогою джави створити в таблиці 10 різних юзерів
         for (Person person: personList) {
             PreparedStatement insertStatement = connection.prepareStatement("Insert into user(firstName, lastName, age, city) value(?, ?, ?, ?);");
@@ -37,7 +37,7 @@ public class Main {
             insertStatement.setString(4, person.getCity());
             insertStatement.executeUpdate();
         }
-*/
+
         //витягнути з бази тих хто старше 18;
         PreparedStatement statement = connection.prepareStatement("SELECT * FROM user WHERE age > ?");
         statement.setInt(1, 18);
