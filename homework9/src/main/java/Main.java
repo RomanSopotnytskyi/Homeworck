@@ -24,8 +24,8 @@ public class Main {
         personList.add(new Person("Nikolai","Amosov",89,"Kyiv"));
         personList.add(new Person("Viacheslav","Chornovil ",61,"Lviv"));
         personList.add(new Person("Sviatoslav","Vakarchuk",46,"Mukachevo"));
-        personList.add(new Person("Borys","Paton",101,"Kiiv"));
-        personList.add(new Person("Igor","Sikorsky",83,"Kiiv"));
+        personList.add(new Person("Borys","Paton",101,"Kyiv"));
+        personList.add(new Person("Igor","Sikorsky",83,"Kyiv"));
         personList.add(new Person("Ruslan","Rotan",40,"Poltava"));
 
         //За допомогою джави створити в таблиці 10 різних юзерів
