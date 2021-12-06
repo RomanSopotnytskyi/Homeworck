@@ -1,7 +1,6 @@
 package com.lits.homework11.models;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @Entity

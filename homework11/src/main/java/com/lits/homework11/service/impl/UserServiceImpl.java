@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @NoArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -27,28 +25,27 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAll() {
+    public Iterable<User> getAll() {
         return userRepository.findAll();
     }
 
     @Override
-    public List<User> getByLastname(String lastname) {
+    public Iterable<User> getByLastname(String lastname) {
         return userRepository.findByLastname(lastname);
     }
 
     @Override
     public User getByEmail(String email) {
-        return userRepository.findByEmail(email);
+        return userRepository.findByEmail(email).orElseThrow();
     }
 
     @Override
-    public List<User> getByAge(int age) {
+    public Iterable<User> getByAge(int age) {
         return userRepository.findByAgeGreaterThan(age);
     }
 
     @Override
-    public List<User> getWhereEmailIsGmail() {
+    public Iterable<User> getWhereEmailIsGmail() {
         return userRepository.findUsersWithGmailAddress();
     }
-
 }

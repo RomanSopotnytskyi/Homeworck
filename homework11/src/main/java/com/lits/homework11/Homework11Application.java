@@ -28,8 +28,8 @@ public class Homework11Application {
 			userList.add(new User("Nikolai","Amosov",89,"Kyiv@gmail.com"));
 			userList.add(new User("Viacheslav","Chornovil ",61,"Lviv@gmail.com"));
 			userList.add(new User("Sviatoslav","Vakarchuk",46,"Mukachevo@outlook.com"));
-			userList.add(new User("Borys","Paton",101,"Kiiv@outlook.com"));
-			userList.add(new User("Igor","Sikorsky",83,"Kiiv@outlook.com"));
+			userList.add(new User("Borys","Paton",101,"Kyiv@outlook.com"));
+			userList.add(new User("Igor","Sikorsky",83,"Kyiv@outlook.com"));
 			userList.add(new User("Ruslan","Rotan",40,"Poltava@gmail.com"));
 
 			//-Додати 10 різних юзерів
@@ -43,15 +43,11 @@ public class Homework11Application {
 
 			//-Додати ф-нал щоб вивести всіх в консоль
 			System.out.println("--------------------------------");
-			for(User elemList : userConsoleController.getAll()) {
-				System.out.println(elemList);
-			}
+			userConsoleController.getAll().forEach(System.out::println);
 
 			//-Додати ф-нал щоб знайти по прізвищу
 			System.out.println("--------------------------------");
-			for(User elemList : userConsoleController.getByLastname("Amosov")) {
-				System.out.println(elemList);
-			}
+			userConsoleController.getByLastname("Amosov").forEach(System.out::println);
 
 			//-Додати ф-нал щоб знайти по  email
 			System.out.println("--------------------------------");
@@ -59,18 +55,13 @@ public class Homework11Application {
 
 			//-Додати ф-нал щоб вивести всіх старше 25
 			System.out.println("--------------------------------");
-			for(User elemList : userConsoleController.getByAge(25)) {
-				System.out.println(elemList);
-			}
+			userConsoleController.getByAge(25).forEach(System.out::println);
 
 			//-Додати ф-нал щоб вивести всіх email яких закінчується на gmail.com
 			System.out.println("--------------------------------");
-			for(User elemList : userConsoleController.getWhereEmailIsGmail()) {
-				System.out.println(elemList);
-			}
+			userConsoleController.getWhereEmailIsGmail().forEach(System.out::println);
 
 			System.out.println("--------------------------------");
 		};
 	}
-
 }
