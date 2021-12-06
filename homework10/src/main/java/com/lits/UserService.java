@@ -3,7 +3,6 @@ package com.lits;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,9 +39,7 @@ public class UserService {
     }
 
     public void print(List<User> userList) {
-        for(User elemList : userList) {
-            System.out.println(elemList.toString());
-        }
+        userList.stream().forEach(System.out::println);
     }
 
     private Session getCurrentSession() {

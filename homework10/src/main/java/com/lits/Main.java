@@ -28,6 +28,7 @@ public class Main {
         for (User user: userList) {
             userService.addUser(user);
         }
+
         //4) Метод щоб вивесті всі
         userService.print(userService.getAll());
         System.out.println();
@@ -42,6 +43,4 @@ public class Main {
         System.out.println(userService.getByID(3).toString());
         System.out.println();
     }
-
-
 }
