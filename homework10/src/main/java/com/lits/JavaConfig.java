@@ -24,8 +24,8 @@ public class JavaConfig {
     @Value("${db.driverClassName}")
     private String driverClassName;
 
-    @Value("${db.username}")
-    private String username;
+    @Value("${db.userName}")
+    private String userName;
 
     @Value("${db.password}")
     private String password;
@@ -48,7 +48,7 @@ public class JavaConfig {
         var dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driverClassName);
         dataSource.setUrl(url);
-        dataSource.setUsername(username);
+        dataSource.setUsername(userName);
         dataSource.setPassword(password);
 
         return dataSource;
