@@ -34,7 +34,7 @@ public class UserRestController {
 
     //4. Написати ендпоніт щоб отримати юзера по firstname
     @GetMapping("/user/{firstname}")
-    public Iterable<User> getByEmail(@PathVariable String firstname) {
+    public Iterable<User> getByFirstName(@PathVariable String firstname) {
         return userService.getByFirstName(firstname);
     }
 
