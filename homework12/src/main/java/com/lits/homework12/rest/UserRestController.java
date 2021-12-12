@@ -6,42 +6,47 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-//@Component
 @AllArgsConstructor
+@RestController
 @RequestMapping("/api/users")
 public class UserRestController {
 
     @Autowired
     private UserService userService;
 
+    //1. Написати ендпоінт щоб отримати всіх Юзерів
     @GetMapping
-    public Iterable<User> getAll(){
+    public Iterable<User> getAll() {
         return userService.getAll();
     }
 
-    /*
-    public User getUserById(Long id){
-        return userService.getById(id);
+    //2. Написати ендпоінт для того видалити по ід
+    @DeleteMapping("/user/{id}")
+    public void delete(@PathVariable Long id) {
+        userService.delete(id);
     }
 
-    public void addUser(User user){
+    //3. Написати ендпоніт щоб створити Юзера
+    @PostMapping("/user")
+    public void addUser(@RequestBody User user) {
         userService.addUser(user);
     }
 
-    public Iterable<User> getByLastname(String lastname) {
-        return userService.getByLastname(lastname);
+    //4. Написати ендпоніт щоб отримати юзера по firstname
+    @GetMapping("/user/{firstname}")
+    public Iterable<User> getByEmail(@PathVariable String firstname) {
+        return userService.getByFirstName(firstname);
     }
 
-    public User getByEmail(String email) {
-        return userService.getByEmail(email);
-    }
-
-    public Iterable<User> getByAge(int age) {
+    //5. Написати всіх юзерів які старші 18 років
+    @GetMapping("/{age}")
+    public Iterable<User> getByAge(@PathVariable int age) {
         return userService.getByAge(age);
     }
 
-    public Iterable<User> getWhereEmailIsGmail(){
-        return userService.getWhereEmailIsGmail();
+    //6. Написати ендпоінт для оновлення юзера
+    @PutMapping("/user/{id}")
+    public User updateUser(@PathVariable("id") Long id, @RequestBody User user) {
+        return userService.updateUser(user, id);
     }
-*/
 }

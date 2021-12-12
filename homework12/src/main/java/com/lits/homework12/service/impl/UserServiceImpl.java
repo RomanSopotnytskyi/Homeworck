@@ -20,23 +20,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getById(Long id) {
-        return userRepository.findById(id).orElseThrow();
-    }
-
-    @Override
     public Iterable<User> getAll() {
         return userRepository.findAll();
     }
 
     @Override
-    public Iterable<User> getByLastname(String lastname) {
-        return userRepository.findByLastname(lastname);
-    }
-
-    @Override
-    public User getByEmail(String email) {
-        return userRepository.findByEmail(email).orElseThrow();
+    public Iterable<User> getByFirstName(String firstname) {
+        return userRepository.findByFirstname(firstname);
     }
 
     @Override
@@ -45,7 +35,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Iterable<User> getWhereEmailIsGmail() {
-        return userRepository.findUsersWithGmailAddress();
+    public void delete(Long id) {
+        userRepository.deleteById(id);
+    }
+
+    @Override
+    public User updateUser(User newUser, Long id) {
+        return userRepository.findById(id).map(user -> {
+                    user.setFirstname(newUser.getFirstname());
+                    user.setLastname(newUser.getLastname());
+                    user.setAge(newUser.getAge());
+                    user.setEmail(newUser.getEmail());
+                    return userRepository.save(user);
+                })
+                .orElseGet(() -> {
+                    newUser.setId(id);
+                    return userRepository.save(newUser);
+                });
     }
 }
